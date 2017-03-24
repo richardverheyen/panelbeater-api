@@ -10,4 +10,9 @@
 #
 
 class Comment < ApplicationRecord
+  # model association
+  belongs_to :case
+
+  # validation
+  validates_presence_of :text
 end

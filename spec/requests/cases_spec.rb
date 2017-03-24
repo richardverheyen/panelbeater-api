@@ -67,7 +67,7 @@ RSpec.describe 'Cases API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/cases', params: {  } }
+      before { post '/cases', params: {} }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)

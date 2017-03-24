@@ -1,7 +1,7 @@
 # TEST 1
 #
 # GET https://www.richard.com/api/cases/?url=https://www.hannahsuttondesign.com.au/contact
-# 
+#
 # Should return JSON like this:
 #
 # {

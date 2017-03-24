@@ -1,4 +1,4 @@
-caserequire 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe 'Cases API', type: :request do
   # initialize test data

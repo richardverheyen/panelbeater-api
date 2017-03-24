@@ -58,7 +58,7 @@ RSpec.describe 'Cases API', type: :request do
       before { post '/cases', params: valid_attributes }
 
       it 'creates a case' do
-        expect(json['url']).to eq('www.hannahsuttondesign.com')
+        expect(json['url']).to eq('www.nabu.io')
       end
 
       it 'returns status code 201' do
@@ -67,7 +67,7 @@ RSpec.describe 'Cases API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/cases', params: { url: 'www.richard.com' } }
+      before { post '/cases', params: {  } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -75,7 +75,7 @@ RSpec.describe 'Cases API', type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: Created by can't be blank/)
+          .to match(/Url can't be blank/)
       end
     end
   end

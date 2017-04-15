@@ -10,18 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_170_324_095_052) do
-  create_table 'cases', force: :cascade do |t|
-    t.string   'url'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema.define(version: 20170414130743) do
+
+  create_table "cases", force: :cascade do |t|
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
   end
 
-  create_table 'comments', force: :cascade do |t|
-    t.string   'text'
-    t.integer  'case_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['case_id'], name: 'index_comments_on_case_id'
+  create_table "comments", force: :cascade do |t|
+    t.string   "text"
+    t.integer  "case_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["case_id"], name: "index_comments_on_case_id"
   end
+
 end

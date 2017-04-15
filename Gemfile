@@ -48,6 +48,9 @@ group :development, :test do
 
   # Rspec for testing
   gem 'rspec-rails', '~> 3.5'
+
+  # For debugging and pretty console
+  gem 'pry'
 end
 
 group :development do
@@ -58,6 +61,9 @@ group :development do
   gem 'annotate' # Adds comments to models (from Jan)
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # AMS lets us concatonate comments onto the end of a case
+  gem 'active_model_serializers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

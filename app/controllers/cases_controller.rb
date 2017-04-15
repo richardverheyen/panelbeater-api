@@ -5,6 +5,7 @@ class CasesController < ApplicationController
   def index
     @cases = Case.all
     json_response(@cases)
+
   end
 
   # POST /cases
@@ -15,7 +16,10 @@ class CasesController < ApplicationController
 
   # GET /cases/:id
   def show
-    json_response(@case)
+    # binding.pry
+    @case = Case.find(params[:id])
+    @comments = Comment.where(case_id: params[:id])
+    json_response(@comments)
   end
 
   # PUT /cases/:id
